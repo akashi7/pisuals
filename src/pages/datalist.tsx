@@ -1,25 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
+import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Layout from '../../components/Layout'
 import CustomTable from '../../components/tables/table'
-import { useState } from 'react'
-
-interface DataItem {
-  id: number
-  customer_name: string
-  email: string
-  signup_date: string
-  last_activity: string
-}
-
-const fetchData = async (): Promise<DataItem[]> => {
-  const response = await fetch('http://localhost:3000/api/dataList')
-  if (!response.ok) {
-    throw new Error('Failed to fetch data')
-  }
-  return response.json()
-}
+import { DataItem, fetchDataList } from '../../services/service'
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState<string>('')
@@ -29,7 +14,7 @@ export default function Home() {
     isError,
   } = useQuery<DataItem[]>({
     queryKey: ['dataList'],
-    queryFn: fetchData,
+    queryFn: fetchDataList,
     staleTime: 1000 * 60 * 5,
     retry: 2,
   })
