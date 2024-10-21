@@ -1,16 +1,8 @@
+import { VistDataItem } from '../../services/service'
 import { GeneralContentLoader } from '../common/loader'
 
-interface Data {
-  id: number
-  pageView: number
-  visitors: number
-  rate: number
-  duration: number
-  date: string
-}
-
 interface VisitedDataProps {
-  data: Array<Data>
+  data: Array<VistDataItem>
   loading: boolean
 }
 

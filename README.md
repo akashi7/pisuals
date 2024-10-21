@@ -7,6 +7,12 @@
 5. Once dependencies installation completed , start the development server with the command: `npm run dev`
 6. Once the server is running, open your web browser and go to: `http://localhost:3000/`
 
+## Features
+
+- Landing page with aggregated website visit data.
+- Visit trends graph for the past 30 days.
+- CRM data table with pagination and search functionality.
+
 ## Technologies
 
 1. NextJs 14 & TypeScript

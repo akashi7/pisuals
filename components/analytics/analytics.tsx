@@ -10,19 +10,11 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
+import { VistDataItem } from '../../services/service'
 import { GeneralContentLoader } from '../common/loader'
 
-interface DataItem {
-  id: number
-  pageView: number
-  visitors: number
-  rate: number
-  duration: number
-  date: string
-}
-
 interface VisitedDataProps {
-  data: DataItem[]
+  data: VistDataItem[]
   loading: boolean
 }
 
