@@ -1,7 +1,7 @@
 # Installation
 
 1. clone this repository
-2. Ensure you have Node.js version 20 or higher installed
+2. Ensure you have Node.js version 20
 3. Navigate to the cloned repository directory
 4. Install all dependencies with the command: `npm i ` or `npm install`
 5. Once dependencies installation completed , start the development server with the command: `npm run dev`
