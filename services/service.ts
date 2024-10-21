@@ -16,7 +16,7 @@ export interface VistDataItem {
 }
 
 export const fetchDataList = async (): Promise<DataItem[]> => {
-  const response = await fetch('http://localhost:3000/api/dataList')
+  const response = await fetch('/api/dataList')
   if (!response.ok) {
     throw new Error('Failed to fetch data')
   }
@@ -24,7 +24,7 @@ export const fetchDataList = async (): Promise<DataItem[]> => {
 }
 
 export const fetchVisitData = async (): Promise<VistDataItem[]> => {
-  const response = await fetch('http://localhost:3000/api/visitData')
+  const response = await fetch('/api/visitData')
   if (!response.ok) {
     throw new Error('Failed to fetch visit data')
   }

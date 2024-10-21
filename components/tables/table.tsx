@@ -116,7 +116,7 @@ const CustomTable = <T extends object>({
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
                 className={`px-4 py-2 ${
-                  currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''
+                  currentPage === 1 ? 'opacity-50 cursor-not-allowed ' : ''
                 }`}
               >
                 {'< Previous'}
